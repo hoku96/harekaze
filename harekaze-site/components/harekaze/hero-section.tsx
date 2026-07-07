@@ -55,7 +55,7 @@ export function HeroSection() {
               href="#menu"
               className="font-sans text-[.85rem] tracking-[.1em] text-ink-70 border-b border-amber-brand/40 pb-[2px] transition-colors duration-200 hover:text-amber-brand hover:border-amber-brand"
             >
-              品書きを見る
+              おしながきを見る
             </a>
           </div>
         </Reveal>

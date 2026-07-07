@@ -1,10 +1,10 @@
 import { Reveal } from './reveal'
 
 const FOOTER_LINKS = [
-  { label: '品書き', href: '#menu' },
+  { label: 'おしながき', href: '#menu' },
   { label: '日本酒', href: '#sake' },
   { label: '雰囲気', href: '#atmosphere' },
-  { label: 'Journey', href: '#journey' },
+  { label: '今日', href: '#journey' },
   { label: 'お客様の声', href: '#voices' },
   { label: '店舗案内', href: '#info' },
   { label: '090-5446-2391', href: 'tel:09054462391' },

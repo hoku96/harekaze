@@ -13,7 +13,7 @@ export function DishImage({
     return (
       <div
         className="relative aspect-[4/5] w-full rounded-sm border border-border bg-[#F2ECDF] flex items-center justify-center"
-        aria-label={`${alt}（画像準備中）`}
+        aria-hidden="true"
       >
         <span className="text-ink-45 text-[.68rem] tracking-[.25em]">画像準備中</span>
       </div>

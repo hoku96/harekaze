@@ -46,7 +46,7 @@ export function MenuSection() {
               className="font-serif font-normal tracking-[.12em]"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 2.6rem)' }}
             >
-              品書き
+              おしながき
             </h2>
             <span className="text-ink-45 text-[.78rem] tracking-[.34em] self-center">
               SIGNATURE DISHES

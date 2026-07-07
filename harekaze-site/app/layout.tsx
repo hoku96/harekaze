@@ -15,11 +15,26 @@ const zenKakuGothicNew = Zen_Kaku_Gothic_New({
   variable: '--font-zen-kaku',
 })
 
+const title = 'ご飯処 晴れ風 ｜ 富里・日吉台 名物"生鯖"と魚の店'
+const description =
+  '千葉県富里市日吉台。名物の生鯖と旬の魚、日本酒50種を愉しむご飯処 晴れ風。ランチもディナーも営業する定食屋×居酒屋。'
+
 export const metadata: Metadata = {
-  title: 'ご飯処 晴れ風 ｜ 富里・日吉台 名物"生鯖"と魚の店',
-  description:
-    '千葉県富里市日吉台。名物の生鯖と旬の魚、日本酒50種を愉しむご飯処 晴れ風。ランチもディナーも営業する定食屋×居酒屋。',
+  title,
+  description,
   generator: 'v0.app',
+  openGraph: {
+    title,
+    description,
+    siteName: 'ご飯処 晴れ風',
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title,
+    description,
+  },
 }
 
 export const viewport: Viewport = {
