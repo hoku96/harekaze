@@ -151,3 +151,30 @@
     font-size: 1.8rem;
   }
 }
+
+/* 暖簾: 風になびく揺れ(transformのみ・GPU合成) */
+@keyframes noren-sway {
+  0%,
+  100% {
+    transform: rotate(-2deg) skewX(-1.2deg);
+  }
+  50% {
+    transform: rotate(2deg) skewX(1.2deg);
+  }
+}
+.noren-sway {
+  transform-origin: top center;
+  animation: noren-sway 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+}
+.noren-sway-delay-1 {
+  animation-delay: 0.6s;
+}
+.noren-sway-delay-2 {
+  animation-delay: 1.2s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .noren-sway {
+    animation: none;
+  }
+}
