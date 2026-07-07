@@ -4,11 +4,11 @@ const FOOTER_LINKS = [
   { label: 'おしながき', href: '#menu' },
   { label: '日本酒', href: '#sake' },
   { label: '雰囲気', href: '#atmosphere' },
-  { label: '今日', href: '#journey' },
   { label: 'お客様の声', href: '#voices' },
   { label: '店舗案内', href: '#info' },
-  { label: '090-5446-2391', href: 'tel:09054462391' },
 ]
+
+const TABELOG_URL = 'https://tabelog.com/chiba/A1204/A120401/12064482/'
 
 export function FooterSection() {
   return (
@@ -25,6 +25,25 @@ export function FooterSection() {
           <p className="text-ink-45 text-[.82rem] tracking-[.14em] mt-[14px]">
             名物&ldquo;生鯖&rdquo;と魚の店 ・ 日吉台のご飯処
           </p>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div className="mt-9 flex gap-5 flex-wrap items-center justify-center">
+            <a
+              href={TABELOG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-[.85rem] tracking-[.1em] px-7 py-[13px] rounded-sm transition-colors duration-300 bg-seal text-white hover:bg-[#9e2f24]"
+            >
+              食べログで予約する
+            </a>
+            <a
+              href="tel:09054462391"
+              className="text-[.85rem] text-ink-70 border-b border-amber-brand/40 pb-[2px] transition-colors duration-200 hover:text-amber-brand hover:border-amber-brand"
+            >
+              090-5446-2391
+            </a>
+          </div>
         </Reveal>
 
         <Reveal delay={0.12}>

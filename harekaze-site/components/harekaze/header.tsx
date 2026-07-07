@@ -13,7 +13,6 @@ export function Header() {
           <a href="#menu" className="transition-colors duration-[.25s] hover:text-amber-brand">おしながき</a>
           <a href="#sake" className="transition-colors duration-[.25s] hover:text-amber-brand">日本酒</a>
           <a href="#atmosphere" className="transition-colors duration-[.25s] hover:text-amber-brand">雰囲気</a>
-          <a href="#journey" className="transition-colors duration-[.25s] hover:text-amber-brand">今日</a>
           <a href="#voices" className="transition-colors duration-[.25s] hover:text-amber-brand">お客様の声</a>
           <a href="#info" className="transition-colors duration-[.25s] hover:text-amber-brand">店舗案内</a>
         </nav>

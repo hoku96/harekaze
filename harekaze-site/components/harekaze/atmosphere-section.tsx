@@ -3,6 +3,8 @@ import { Reveal } from './reveal'
 // 写真を追加する際は、DishImage(components/harekaze/dish-image.tsx)と同様の
 // aspect比固定プレースホルダー構造を流用してください。今回はテキストのみで構成しています。
 
+const INSTAGRAM_URL = 'https://www.instagram.com/harekaze.hiyoshidai/'
+
 const FEATURES = [
   {
     title: '隠れ家',
@@ -65,6 +67,26 @@ export function AtmosphereSection() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.3}>
+          <div className="mt-16 pt-14 border-t border-border">
+            <p className="text-ink-70 text-[.98rem] leading-[2]">
+              日本酒も、料理も。
+              <br />
+              その日いちばんを、お出ししています。
+              <br />
+              移りゆく旬は、Instagramで日々お届けします。
+            </p>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-block font-sans text-[.9rem] tracking-[.12em] px-[30px] py-[15px] rounded-sm transition-colors duration-300 bg-seal text-white hover:bg-[#9e2f24]"
+            >
+              ＠harekaze.hiyoshidai を見る
+            </a>
+          </div>
+        </Reveal>
 
       </div>
     </section>

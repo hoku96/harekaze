@@ -29,7 +29,7 @@ export function VoicesSection() {
         {/* Section heading */}
         <Reveal>
           <div className="mb-16 flex items-baseline gap-5 flex-wrap">
-            <span className="font-serif text-seal text-[1.1rem] tracking-[.2em]">肆</span>
+            <span className="font-serif text-seal text-[1.1rem] tracking-[.2em]">参</span>
             <h2
               className="font-serif font-normal tracking-[.12em]"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 2.6rem)' }}

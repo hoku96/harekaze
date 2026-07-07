@@ -20,7 +20,7 @@ export function InfoSection() {
         {/* Section heading */}
         <Reveal>
           <div className="mb-16 flex items-baseline gap-5 flex-wrap">
-            <span className="font-serif text-seal text-[1.1rem] tracking-[.2em]">伍</span>
+            <span className="font-serif text-seal text-[1.1rem] tracking-[.2em]">肆</span>
             <h2
               className="font-serif font-normal tracking-[.12em]"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 2.6rem)' }}
@@ -165,6 +165,21 @@ export function InfoSection() {
           </Reveal>
 
         </div>
+
+        {/* Map */}
+        <Reveal delay={0.1}>
+          <div className="mt-10 rounded-sm overflow-hidden border border-border">
+            <iframe
+              src="https://www.google.com/maps?q=%E3%81%94%E9%A3%AF%E5%87%A6%E6%99%B4%E3%82%8C%E9%A2%A8%20%E5%8D%83%E8%91%89%E7%9C%8C%E5%AF%8C%E9%87%8C%E5%B8%82%E6%97%A5%E5%90%89%E5%8F%B03-34-8&output=embed"
+              width="100%"
+              height="320"
+              loading="lazy"
+              title="ご飯処 晴れ風の地図"
+              className="w-full h-[320px] border-0 grayscale-[55%] contrast-[.95] transition-[filter] duration-500 hover:grayscale-0"
+            />
+          </div>
+        </Reveal>
+
       </div>
     </section>
   )
