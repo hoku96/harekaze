@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/hoku/**)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(./node_modules/.bin/next build *)",
+      "WebSearch",
+      "WebFetch(domain:tabelog.com)",
+      "Bash(grep -rn -i 'threads' components/ app/)",
+      "Bash(grep -rn 'instagram.com/harekaze.hiyoshidai\"' components/ app/)",
+      "Bash(grep -rn 'tabelog.com' components/ app/)",
+      "Bash(grep -rn 'font-extrabold' components/*.tsx components/harekaze/*.tsx)"
+    ]
+  }
+}

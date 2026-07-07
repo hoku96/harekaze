@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご飯処 晴れ風 ｜ 富里・日吉台 名物"生鯖"と魚の店</title>
+<meta name="description" content="千葉県富里市日吉台。名物の生鯖と旬の魚、日本酒50種を愉しむご飯処 晴れ風。ランチもディナーも営業する定食屋×居酒屋。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sumi:#181410;
+  --sumi-soft:#241d16;
+  --washi:#f2ebdd;
+  --washi-dim:#e4dac5;
+  --amber:#ef9740;
+  --amber-deep:#d97e28;
+  --seal:#b23b2e;
+  --silver:#8fa2ad;
+  --ink-70:rgba(242,235,221,.7);
+  --ink-45:rgba(242,235,221,.45);
+  --serif:"Shippori Mincho",serif;
+  --gothic:"Zen Kaku Gothic New",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--sumi);
+  color:var(--washi);
+  font-family:var(--gothic);
+  font-weight:400;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(1200px 600px at 82% -5%, rgba(239,151,64,.08), transparent 60%),
+    radial-gradient(900px 500px at -10% 100%, rgba(143,162,173,.05), transparent 60%);
+}
+main{position:relative;z-index:1}
+
+.bar{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(10px);
+  background:rgba(24,20,16,.75);
+  border-bottom:1px solid rgba(242,235,221,.08);
+}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-weight:700;letter-spacing:.18em;font-size:1.05rem}
+.brand span{color:var(--amber)}
+.nav{display:flex;gap:30px;font-size:.82rem;letter-spacing:.14em;color:var(--ink-70)}
+.nav a{transition:color .25s}
+.nav a:hover{color:var(--amber)}
+.nav-cta{
+  border:1px solid var(--amber);color:var(--amber);
+  padding:7px 16px;border-radius:2px;font-size:.78rem;letter-spacing:.12em;
+  transition:.25s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--amber);color:var(--sumi)}
+@media(max-width:820px){.nav{display:none}}
+
+.hero{
+  min-height:92vh;display:grid;grid-template-columns:1.15fr .85fr;
+  align-items:center;gap:40px;padding:60px 0 80px;position:relative;
+}
+.hero-left{position:relative}
+.eyebrow{
+  font-family:var(--serif);color:var(--amber);letter-spacing:.36em;
+  font-size:.78rem;margin-bottom:26px;
+}
+.hero h1{
+  font-family:var(--serif);font-weight:800;line-height:1.12;
+  font-size:clamp(2.6rem,7vw,5.2rem);letter-spacing:.04em;
+}
+.hero h1 .sub{display:block;font-size:.32em;letter-spacing:.5em;color:var(--ink-70);margin-top:18px;font-weight:600}
+.hero-lead{
+  margin-top:32px;max-width:36ch;color:var(--ink-70);font-size:1.02rem;line-height:2.1;
+}
+.hero-lead b{color:var(--washi);font-weight:500}
+.hero-meta{
+  margin-top:38px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+  font-size:.82rem;letter-spacing:.06em;color:var(--ink-70);
+}
+.rating{display:flex;align-items:center;gap:9px;
+  border:1px solid rgba(239,151,64,.4);border-radius:2px;padding:8px 14px;color:var(--washi)}
+.rating b{font-family:var(--serif);font-size:1.3rem;color:var(--amber);line-height:1}
+.stars{color:var(--amber);letter-spacing:2px;font-size:.9rem}
+.hero-actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  font-family:var(--gothic);font-size:.9rem;letter-spacing:.1em;
+  padding:14px 26px;border-radius:2px;transition:.25s;cursor:pointer;border:1px solid transparent;
+}
+.btn-primary{background:var(--seal);color:var(--washi)}
+.btn-primary:hover{background:#c9463a;transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(242,235,221,.25);color:var(--washi)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+.noren{
+  position:relative;height:520px;display:flex;justify-content:center;align-items:stretch;gap:18px;
+}
+.noren-panel{
+  width:118px;border-radius:0 0 4px 4px;
+  background:linear-gradient(180deg,var(--amber),var(--amber-deep));
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.8);
+  display:flex;flex-direction:column;align-items:center;padding-top:40px;
+  position:relative;overflow:hidden;
+}
+.noren-panel::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:12px;
+  background:rgba(24,20,16,.85);
+}
+.tate{
+  writing-mode:vertical-rl;text-orientation:upright;
+  font-family:var(--serif);font-weight:800;font-size:2.6rem;letter-spacing:.22em;
+  color:var(--sumi);
+}
+.noren-cap{
+  writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;
+  font-size:.72rem;letter-spacing:.3em;color:rgba(24,20,16,.7);margin-top:14px;
+}
+.noren-seal{
+  position:absolute;right:-6px;bottom:44px;z-index:5;
+  width:76px;height:76px;border-radius:50%;
+  background:var(--seal);color:var(--washi);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:700;line-height:1.15;text-align:center;
+  font-size:.72rem;letter-spacing:.05em;
+  box-shadow:0 10px 24px -8px rgba(178,59,46,.7);
+  transform:rotate(-8deg);
+}
+.wind{position:absolute;inset:0;pointer-events:none;opacity:.35}
+.wind path{stroke:var(--amber);stroke-width:1.4;fill:none;stroke-linecap:round}
+
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;padding:40px 0 60px}
+  .noren{height:360px;order:-1;margin-bottom:10px}
+  .noren-panel{width:86px}
+  .tate{font-size:1.9rem}
+}
+
+.section{padding:96px 0;position:relative}
+.section-head{margin-bottom:52px;display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
+.sec-no{font-family:var(--serif);color:var(--seal);font-size:1.1rem;letter-spacing:.2em}
+.sec-title{font-family:var(--serif);font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.08em}
+.sec-en{color:var(--ink-45);font-size:.78rem;letter-spacing:.34em;align-self:center}
+
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.dish{
+  border:1px solid rgba(242,235,221,.1);border-radius:4px;padding:30px 30px 28px;
+  background:linear-gradient(180deg,rgba(36,29,22,.7),rgba(30,24,18,.3));
+  transition:.3s;position:relative;overflow:hidden;
+}
+.dish:hover{border-color:rgba(239,151,64,.4);transform:translateY(-3px)}
+.dish.feat{grid-column:1 / -1;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center}
+.dish .badge{
+  font-family:var(--serif);font-size:.68rem;letter-spacing:.2em;color:var(--sumi);
+  background:var(--amber);padding:4px 11px;border-radius:2px;display:inline-block;margin-bottom:14px;
+}
+.dish h3{font-family:var(--serif);font-weight:700;font-size:1.4rem;letter-spacing:.05em;line-height:1.4}
+.dish .en{color:var(--ink-45);font-size:.74rem;letter-spacing:.16em;margin-top:6px}
+.dish p{color:var(--ink-70);font-size:.92rem;margin-top:14px;line-height:1.95}
+.dish .kanji-mark{
+  writing-mode:vertical-rl;font-family:var(--serif);font-weight:800;
+  font-size:2.4rem;color:var(--seal);letter-spacing:.1em;opacity:.9;
+}
+.price{font-family:var(--serif);color:var(--amber);font-size:1.05rem;white-space:nowrap;align-self:start;margin-top:4px}
+.small-plates{
+  margin-top:26px;border:1px solid rgba(242,235,221,.1);border-radius:4px;
+  padding:26px 30px;background:rgba(36,29,22,.4);
+}
+.small-plates h4{font-family:var(--serif);font-weight:700;letter-spacing:.1em;margin-bottom:6px;font-size:1.1rem}
+.small-plates .en{color:var(--ink-45);font-size:.72rem;letter-spacing:.16em;margin-bottom:18px}
+.plate-list{display:flex;flex-wrap:wrap;gap:10px}
+.plate{
+  font-size:.88rem;color:var(--ink-70);
+  border:1px solid rgba(242,235,221,.16);padding:7px 15px;border-radius:2px;
+}
+@media(max-width:760px){
+  .menu-grid{grid-template-columns:1fr}
+  .dish.feat{grid-template-columns:1fr}
+  .dish .kanji-mark{writing-mode:horizontal-tb;font-size:1.8rem}
+}
+
+.sake{
+  background:linear-gradient(180deg,#14100c,#181410);
+  border-top:1px solid rgba(242,235,221,.08);
+  border-bottom:1px solid rgba(242,235,221,.08);
+  text-align:center;
+}
+.sake .wrap{max-width:780px}
+.sake .tate-quote{
+  writing-mode:vertical-rl;font-family:var(--serif);font-weight:700;
+  font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.9;letter-spacing:.14em;
+  height:300px;margin:0 auto;color:var(--washi);
+}
+.sake .tate-quote em{color:var(--amber);font-style:normal}
+.sake p{color:var(--ink-70);margin-top:40px;font-size:.98rem}
+.sake .sake-tags{margin-top:30px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.sake-tags .st{
+  font-family:var(--serif);font-size:.82rem;letter-spacing:.1em;color:var(--amber);
+  border:1px solid rgba(239,151,64,.4);padding:6px 16px;border-radius:2px;
+}
+@media(max-width:760px){.sake .tate-quote{height:auto;writing-mode:horizontal-tb}}
+
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.voice{
+  border:1px solid rgba(242,235,221,.1);border-radius:4px;padding:28px 26px;
+  background:rgba(36,29,22,.4);position:relative;
+}
+.voice .q{font-family:var(--serif);color:var(--seal);font-size:2.4rem;line-height:.6;opacity:.5}
+.voice p{color:var(--washi);font-size:.95rem;line-height:1.95;margin:12px 0 20px}
+.voice .who{display:flex;align-items:center;gap:11px;font-size:.8rem;color:var(--ink-70)}
+.avatar{
+  width:34px;height:34px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--amber),var(--seal));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:700;color:var(--sumi);font-size:.8rem;
+}
+.who .stars{color:var(--amber);font-size:.72rem;letter-spacing:1px}
+@media(max-width:900px){.voices{grid-template-columns:1fr}}
+
+.info-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.info-list{width:100%;border-collapse:collapse}
+.info-list th,.info-list td{
+  text-align:left;padding:18px 4px;border-bottom:1px solid rgba(242,235,221,.1);
+  vertical-align:top;font-size:.95rem;
+}
+.info-list th{
+  font-family:var(--serif);font-weight:600;color:var(--amber);
+  letter-spacing:.12em;width:120px;white-space:nowrap;
+}
+.info-list td{color:var(--ink-70)}
+.info-list td b{color:var(--washi);font-weight:500}
+.info-list a{color:var(--washi);border-bottom:1px solid rgba(239,151,64,.4);transition:.2s}
+.info-list a:hover{color:var(--amber)}
+.hours-card{
+  border:1px solid rgba(239,151,64,.3);border-radius:4px;padding:32px 30px;
+  background:linear-gradient(180deg,rgba(239,151,64,.06),transparent);
+}
+.hours-card h4{font-family:var(--serif);font-weight:700;letter-spacing:.14em;margin-bottom:20px}
+.hours-row{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px dashed rgba(242,235,221,.14)}
+.hours-row .label{font-family:var(--serif);color:var(--amber);letter-spacing:.1em;font-size:.92rem}
+.hours-row .time{font-size:1.05rem;letter-spacing:.04em}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.tag{
+  font-size:.72rem;letter-spacing:.08em;color:var(--ink-70);
+  border:1px solid rgba(242,235,221,.18);padding:5px 12px;border-radius:20px;
+}
+.radio{
+  margin-top:26px;border-left:2px solid var(--seal);padding:6px 0 6px 18px;
+  font-size:.86rem;color:var(--ink-70);line-height:1.85;
+}
+.radio b{color:var(--washi);font-family:var(--serif)}
+@media(max-width:760px){.info-grid{grid-template-columns:1fr;gap:32px}}
+
+footer{
+  padding:64px 0 48px;text-align:center;
+  border-top:1px solid rgba(242,235,221,.08);
+}
+.foot-brand{font-family:var(--serif);font-weight:800;font-size:1.8rem;letter-spacing:.2em}
+.foot-brand span{color:var(--amber)}
+.foot-lead{color:var(--ink-45);font-size:.82rem;letter-spacing:.14em;margin-top:14px}
+.foot-links{display:flex;gap:26px;justify-content:center;margin-top:28px;font-size:.82rem;color:var(--ink-70);flex-wrap:wrap}
+.foot-links a:hover{color:var(--amber)}
+.copyright{margin-top:36px;font-size:.72rem;color:var(--ink-45);letter-spacing:.1em}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">晴れ<span>風</span></a>
+    <nav class="nav">
+      <a href="#menu">品書き</a>
+      <a href="#sake">日本酒</a>
+      <a href="#voices">お客様の声</a>
+      <a href="#info">店舗案内</a>
+    </nav>
+    <a class="nav-cta" href="tel:09054462391">ご予約 090-5446-2391</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="wrap hero">
+    <div class="hero-left">
+      <p class="eyebrow reveal">千葉県富里市 日吉台 ・ 定食屋 × 居酒屋</p>
+      <h1 class="reveal">ご飯処<br>晴れ風
+        <span class="sub">H A R E K A Z E</span>
+      </h1>
+      <p class="hero-lead reveal">名物は<b>"生鯖"</b>。鮮度が命の魚を、いちばん旨い切り方で。取り揃えた<b>日本酒は50種</b>。昼は出汁の効いた定食、夜は刺盛りに一献。若い二人が営む、日吉台のご飯処です。</p>
+
+      <div class="hero-meta reveal">
+        <span class="rating"><b>4.9</b><span class="stars">★★★★★</span></span>
+        <span>Googleクチコミ 96件</span>
+        <span>・</span>
+        <span>お一人 ¥1,000〜2,000</span>
+      </div>
+
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="tel:09054462391">電話で予約する</a>
+        <a class="btn btn-ghost" href="#menu">品書きを見る</a>
+      </div>
+    </div>
+
+    <div class="hero-right reveal">
+      <div class="noren">
+        <svg class="wind" viewBox="0 0 300 520" preserveAspectRatio="none">
+          <path d="M10 60 q60 -20 120 0 t150 0"/>
+          <path d="M0 120 q70 -22 140 0 t150 0"/>
+          <path d="M20 470 q60 20 120 0 t150 0"/>
+        </svg>
+        <div class="noren-panel"><span class="tate">晴</span></div>
+        <div class="noren-panel"><span class="tate">れ</span></div>
+        <div class="noren-panel"><span class="tate">風</span><span class="noren-cap">ご飯処</span></div>
+        <div class="noren-seal">生鯖<br>と魚</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="sec-no">壱</span>
+        <h2 class="sec-title">品書き</h2>
+        <span class="sec-en">SIGNATURE DISHES</span>
+      </div>
+
+      <div class="menu-grid">
+        <div class="dish feat reveal">
+          <span class="kanji-mark">鯖</span>
+          <div>
+            <span class="badge">名物</span>
+            <h3>むじょか 生鯖刺身定食</h3>
+            <div class="en">MUJOKA RAW MACKEREL SET</div>
+            <p>鮮度が命の生の鯖を、厚めに引いた刺身で。噛むほどに脂の甘みが広がる看板の一皿を、炊きたてのご飯と自家製の味噌汁で。晴れ風といえば、まずこれを。</p>
+          </div>
+          <span class="price">定食 ¥1,500〜</span>
+        </div>
+
+        <div class="dish reveal">
+          <span class="badge">人気</span>
+          <h3>晴れ式<br>鶏の唐揚げ定食</h3>
+          <div class="en">HARE-STYLE KARAAGE SET</div>
+          <p>下味からこだわった、外は香ばしく中はジューシーな唐揚げ。ランチの定番として長く愛される、間違いのない一皿です。</p>
+          <span class="price">定食 ¥1,200〜</span>
+        </div>
+
+        <div class="dish reveal">
+          <h3>刺盛り<br>盛り合わせ</h3>
+          <div class="en">SASHIMI ASSORTMENT</div>
+          <p>その日の仕入れから旬の魚を。真鯛のお刺身をはじめ、一切れが分厚く、日本酒を合わせずにはいられない贅沢な盛り合わせです。</p>
+          <span class="price">時価</span>
+        </div>
+
+        <div class="dish reveal">
+          <h3>和牛カレー</h3>
+          <div class="en">WAGYU CURRY</div>
+          <p>和牛の旨みをじっくり溶け込ませた、居酒屋の一品とは思えない本格カレー。ランチにも昼飲みの〆にも人気です。</p>
+          <span class="price">¥1,200</span>
+        </div>
+
+        <div class="dish reveal">
+          <h3>太刀魚と<br>大葉チーズフライ</h3>
+          <div class="en">TACHIUO &amp; SHISO CHEESE FRY</div>
+          <p>旬の太刀魚に大葉とチーズを巻いて揚げた、当店らしい一品。おすすめ黒板に並ぶ、日替わりの逸品からひとつ。</p>
+          <span class="price">おすすめ</span>
+        </div>
+      </div>
+
+      <div class="small-plates reveal">
+        <h4>一品料理・本日のおすすめ</h4>
+        <div class="en">SMALL PLATES &amp; WEEKLY SPECIALS</div>
+        <div class="plate-list">
+          <span class="plate">アサリチャンジャ</span>
+          <span class="plate">きんぴらごぼう</span>
+          <span class="plate">インゲンのマヨ味噌ディップ</span>
+          <span class="plate">真鯛のお刺身</span>
+          <span class="plate">まぐろと大根の煮込み</span>
+          <span class="plate">里芋の煮ころがし</span>
+          <span class="plate">ヤングコーンと生ハムチーズの春巻</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sake" id="sake">
+    <div class="wrap">
+      <div class="tate-quote reveal">旬を肴に、<br><em>一献かたむける。</em></div>
+      <p class="reveal">全国から選りすぐった<b style="color:var(--washi)">日本酒50種</b>。三重の「作（ざく）」、高知、栃木の地酒まで、刺身と定食に寄り添う一杯を日替わりで。昼飲みも、仕事帰りの一杯も、家族のごはんも。晴れ風は、そんな時間のための店です。</p>
+      <div class="sake-tags reveal">
+        <span class="st">日本酒 50種</span>
+        <span class="st">作 -三重-</span>
+        <span class="st">昼飲み歓迎</span>
+        <span class="st">全国の地酒</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="voices">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="sec-no">弐</span>
+        <h2 class="sec-title">お客様の声</h2>
+        <span class="sec-en">FROM OUR GUESTS</span>
+      </div>
+
+      <div class="voices">
+        <div class="voice reveal">
+          <div class="q">&ldquo;</div>
+          <p>落ち着いた店内で、ゆっくり食事を楽しめました。丁寧で温かみのある接客が印象に残っています。</p>
+          <div class="who">
+            <span class="avatar">I</span>
+            <div>I.D. さん<br><span class="stars">★★★★★ ・ ローカルガイド</span></div>
+          </div>
+        </div>
+
+        <div class="voice reveal">
+          <div class="q">&ldquo;</div>
+          <p>おすすめの刺盛りを注文。一切れが分厚く、まさに旬を食べていると実感できる贅沢さでした。</p>
+          <div class="who">
+            <span class="avatar">S</span>
+            <div>S.M. さん<br><span class="stars">★★★★★</span></div>
+          </div>
+        </div>
+
+        <div class="voice reveal">
+          <div class="q">&ldquo;</div>
+          <p>おもてなしの心が詰まった和食屋さん。味噌汁一つ、サラダのドレッシング一つに手間を感じました。</p>
+          <div class="who">
+            <span class="avatar">M</span>
+            <div>M.F. さん<br><span class="stars">★★★★★ ・ ローカルガイド</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="info">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="sec-no">参</span>
+        <h2 class="sec-title">店舗案内</h2>
+        <span class="sec-en">INFORMATION</span>
+      </div>
+
+      <div class="info-grid">
+        <table class="info-list reveal">
+          <tr><th>店名</th><td><b>ご飯処 晴れ風</b>（定食屋 × 居酒屋）</td></tr>
+          <tr><th>住所</th><td><b>〒286-0201</b><br>千葉県富里市日吉台3丁目34-8 B1（左）</td></tr>
+          <tr><th>電話</th><td><a href="tel:09054462391">090-5446-2391</a></td></tr>
+          <tr><th>予算</th><td>お一人 <b>¥1,000〜2,000</b> 程度</td></tr>
+          <tr><th>ご利用</th><td>店内飲食 ・ テイクアウト ・ デリバリー</td></tr>
+          <tr><th>予約</th><td><a href="https://www.instagram.com/harekaze.hiyoshidai" target="_blank" rel="noopener">Instagram</a> のプロフィールリンクより（席確保おすすめ）</td></tr>
+          <tr><th>SNS</th><td><a href="https://www.instagram.com/harekaze.hiyoshidai" target="_blank" rel="noopener">Instagram</a> ／ <a href="https://www.threads.net/@harekaze.hiyoshidai" target="_blank" rel="noopener">Threads</a> ＠harekaze.hiyoshidai</td></tr>
+        </table>
+
+        <aside class="hours-card reveal">
+          <h4>営業時間</h4>
+          <div class="hours-row">
+            <span class="label">ランチ</span>
+            <span class="time">11:30 – 15:00</span>
+          </div>
+          <div class="hours-row">
+            <span class="label">ディナー</span>
+            <span class="time">17:00 – 22:00</span>
+          </div>
+
+          <div class="tags">
+            <span class="tag">駐車場あり</span>
+            <span class="tag">お子様連れ大歓迎</span>
+            <span class="tag">日本酒50種</span>
+            <span class="tag">海鮮</span>
+            <span class="tag">昼飲み歓迎</span>
+            <span class="tag">LGBTQ+ フレンドリー</span>
+          </div>
+
+          <div class="radio">
+            <b>ラジオ出演のお知らせ</b><br>
+            「わくわくホームプレゼンツ 僕らの秘密基地」に出演。7月毎週木曜 20:00〜 放送。
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand reveal">晴れ<span>風</span></div>
+    <p class="foot-lead reveal">名物"生鯖"と魚の店 ・ 日吉台のご飯処</p>
+    <nav class="foot-links reveal">
+      <a href="#menu">品書き</a>
+      <a href="#sake">日本酒</a>
+      <a href="#voices">お客様の声</a>
+      <a href="#info">店舗案内</a>
+      <a href="tel:09054462391">090-5446-2391</a>
+    </nav>
+    <p class="copyright reveal">© ご飯処 晴れ風 ｜ 千葉県富里市日吉台3-34-8 B1</p>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay = (i%4*0.06)+'s';
+  io.observe(el);
+});
+</script>
+</body>
+</html>

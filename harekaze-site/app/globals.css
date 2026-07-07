@@ -1,0 +1,153 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* 白基調＋橙アクセント。sumi/washiは「濃い墨色のテキスト」トークンとして統一 */
+  --sumi: #2a2622;
+  --sumi-soft: #34302a;
+  --washi: #2a2622;
+  --washi-dim: #4a443c;
+  --amber-brand: #e8832a;
+  --amber-deep: #c86e1e;
+  --seal: #b23b2e;
+  --silver: #8fa2ad;
+  --ink-70: #6b635a;
+  --ink-45: #9c948a;
+  --border: #e7e0d5;
+
+  /* shadcn tokens mapped to harekaze palette */
+  --background: #faf7f0;
+  --foreground: #2a2622;
+  --card: #ffffff;
+  --card-foreground: #2a2622;
+  --popover: #ffffff;
+  --popover-foreground: #2a2622;
+  --primary: #e8832a;
+  --primary-foreground: #2a2622;
+  --secondary: #f2ecdf;
+  --secondary-foreground: #2a2622;
+  --muted: #f2ecdf;
+  --muted-foreground: #6b635a;
+  --accent: #b23b2e;
+  --accent-foreground: #ffffff;
+  --destructive: #b23b2e;
+  --destructive-foreground: #ffffff;
+  --input: #e7e0d5;
+  --ring: #e8832a;
+  --radius: 0.25rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-zen-kaku), 'Zen Kaku Gothic New', sans-serif;
+  --font-serif: var(--font-noto-serif), 'Noto Serif JP', serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand-specific tokens */
+  --color-sumi: var(--sumi);
+  --color-sumi-soft: var(--sumi-soft);
+  --color-washi: var(--washi);
+  --color-washi-dim: var(--washi-dim);
+  --color-amber-brand: var(--amber-brand);
+  --color-amber-deep: var(--amber-deep);
+  --color-seal: var(--seal);
+  --color-silver: var(--silver);
+  --color-ink-70: var(--ink-70);
+  --color-ink-45: var(--ink-45);
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.375rem;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-weight: 400;
+    line-height: 2;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(1200px 600px at 82% -5%, rgba(232, 131, 42, 0.07), transparent 60%),
+      radial-gradient(900px 500px at -10% 100%, rgba(143, 162, 173, 0.06), transparent 60%);
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Writing-mode utilities (not natively in Tailwind) */
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+.text-orientation-upright {
+  text-orientation: upright;
+}
+.sake-quote {
+  writing-mode: vertical-rl;
+  height: 300px;
+}
+.kanji-mark-vert {
+  writing-mode: vertical-rl;
+}
+.noren-caption {
+  writing-mode: vertical-rl;
+}
+@media (max-width: 760px) {
+  .sake-quote {
+    writing-mode: horizontal-tb;
+    height: auto;
+  }
+  .kanji-mark-vert {
+    writing-mode: horizontal-tb;
+    font-size: 1.8rem;
+  }
+}
