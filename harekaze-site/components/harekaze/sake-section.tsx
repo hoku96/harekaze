@@ -11,18 +11,15 @@ export function SakeSection() {
     >
       <div className="max-w-[780px] mx-auto px-7">
 
-        {/* Vertical tate-quote */}
+        {/* Quote */}
         <Reveal>
-          <div className="flex justify-center">
-            <p
-              className="sake-quote font-serif font-normal leading-[1.9] tracking-[.14em] text-washi"
-              style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)' }}
-            >
-              旬を肴に、
-              <br />
-              <em className="text-amber-brand not-italic">一献かたむける。</em>
-            </p>
-          </div>
+          <p
+            className="font-serif font-normal leading-[1.5] tracking-[.1em] text-washi text-center"
+            style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)' }}
+          >
+            旬を肴に、
+            <em className="text-amber-brand not-italic">一献かたむける。</em>
+          </p>
         </Reveal>
 
         <Reveal delay={0.06}>

@@ -131,10 +131,6 @@
 .text-orientation-upright {
   text-orientation: upright;
 }
-.sake-quote {
-  writing-mode: vertical-rl;
-  height: 300px;
-}
 .kanji-mark-vert {
   writing-mode: vertical-rl;
 }
@@ -142,10 +138,6 @@
   writing-mode: vertical-rl;
 }
 @media (max-width: 760px) {
-  .sake-quote {
-    writing-mode: horizontal-tb;
-    height: auto;
-  }
   .kanji-mark-vert {
     writing-mode: horizontal-tb;
     font-size: 1.8rem;
@@ -156,10 +148,10 @@
 @keyframes noren-sway {
   0%,
   100% {
-    transform: rotate(-2deg) skewX(-1.2deg);
+    transform: rotate(-4deg) skewX(-2.4deg);
   }
   50% {
-    transform: rotate(2deg) skewX(1.2deg);
+    transform: rotate(4deg) skewX(2.4deg);
   }
 }
 .noren-sway {

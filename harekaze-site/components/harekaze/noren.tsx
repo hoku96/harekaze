@@ -13,7 +13,7 @@ function NorenPanel({
 }) {
   return (
     <div className="relative w-[118px] max-[820px]:w-[86px] overflow-hidden rounded-b-[4px]">
-      {/* Swaying fabric: transform-only animation, seal stamp lives outside this so it doesn't get dragged along */}
+      {/* Swaying fabric: transform-only animation. Seal stamp lives inside so it rides along with the fabric. */}
       <div
         className={`noren-sway ${SWAY_DELAY_CLASSES[swayIndex]} h-full flex flex-col items-center pt-10`}
         style={{
@@ -43,23 +43,23 @@ function NorenPanel({
             {caption}
           </span>
         )}
-      </div>
 
-      {/* Seal stamp: independent of the fabric sway, stays fixed */}
-      {hasSeal && (
-        <div
-          className="absolute -right-[6px] bottom-[44px] z-[5] w-[76px] h-[76px] rounded-full bg-seal text-white flex items-center justify-center font-serif font-bold text-[.72rem] tracking-[.05em] text-center leading-[1.15]"
-          style={{
-            boxShadow: '0 10px 24px -8px rgba(178,59,46,0.7)',
-            transform: 'rotate(-8deg)',
-          }}
-          aria-hidden="true"
-        >
-          生鯖
-          <br />
-          と魚
-        </div>
-      )}
+        {/* Seal stamp */}
+        {hasSeal && (
+          <div
+            className="absolute -right-[6px] bottom-[44px] z-[5] w-[76px] h-[76px] rounded-full bg-seal text-white flex items-center justify-center font-serif font-bold text-[.72rem] tracking-[.05em] text-center leading-[1.15]"
+            style={{
+              boxShadow: '0 10px 24px -8px rgba(178,59,46,0.7)',
+              transform: 'rotate(-8deg)',
+            }}
+            aria-hidden="true"
+          >
+            生鯖と
+            <br />
+            日本酒
+          </div>
+        )}
+      </div>
     </div>
   )
 }
